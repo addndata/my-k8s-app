@@ -1,12 +1,12 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: default-cluster-admin-binding  # Binding adı
+  name: default-cluster-admin-binding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: cluster-admin  # cluster-admin rolü ile tam yetki ver
+  name: cluster-admin  # cluster-admin tam yetki verir
 subjects:
   - kind: ServiceAccount
-    name: default  # default ServiceAccount
-    namespace: default  # default namespace
+    name: default  # ServiceAccount adı "default"
+    namespace: default  # ServiceAccount "default" namespace içinde
