@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swp-deployment
+  labels:
+    app: swp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: swp
+  template:
+    metadata:
+      labels:
+        app: swp
+    spec:
+      containers:
+      - name: swp-container
+        image: waydar2024/swp:latest  # Docker Hub'da yüklediğin imaj
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8089  # İhtiyaca göre port ayarlanabilir
