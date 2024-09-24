@@ -1,14 +1,12 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: swp-clusterrolebinding  # ClusterRoleBinding adı
-  labels:
-    app: swp
+  name: default-cluster-admin-binding  # Binding adı
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: cluster-admin  # Tam yetki için cluster-admin rolü kullanılır
+  name: cluster-admin  # cluster-admin rolü ile tam yetki ver
 subjects:
   - kind: ServiceAccount
-    name: swp-service-account  # Kullanılacak ServiceAccount adı
-    namespace: default  # Namespace belirt
+    name: default  # default ServiceAccount
+    namespace: default  # default namespace
