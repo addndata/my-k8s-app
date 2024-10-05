@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: swp-container
-        image: waydar2024/swp2:latest  # Docker Hub'da yüklediğin imaj
+        image: waydar2024/swp2:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8089  # İhtiyaca göre port ayarlanabilir
+        - containerPort: 8089 
