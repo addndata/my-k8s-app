@@ -5,8 +5,8 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: cluster-admin  # cluster-admin tam yetki verir
+  name: cluster-admin 
 subjects:
   - kind: ServiceAccount
-    name: default  # ServiceAccount adı "default"
-    namespace: default  # ServiceAccount "default" namespace içinde
+    name: default 
+    namespace: default
